@@ -183,7 +183,7 @@
       padding: 20px 0 60px;
     }
 
-    /* wrap：左侧目录 + 主内容 */
+    /* wrap： directory+ content */
     .wrap{
       width: min(var(--max), 100%);
       padding: 0 20px;
@@ -308,9 +308,9 @@
 
     /* Pair layout: chart + note */
     .card-with-note{
-      /* ✅ 每个 section 可自定义这两个变量 */
-      --vizH: 680px;     /* chart 容器高度 */
-      --noteH: 680px;    /* note 容器高度（和图一致） */
+    
+      --vizH: 680px;   
+      --noteH: 680px;    
 
       display: grid;
       grid-template-columns: 1fr var(--note-w);
@@ -325,7 +325,7 @@
       background: rgba(247,237,226,.20);
       overflow: hidden;
       padding: 8px 8px 4px;
-      min-height: var(--vizH);  /* ✅ 用变量控制，和 note 对齐 */
+      min-height: var(--vizH); 
       width: 100%;
       max-width: 100%;
     }
@@ -352,14 +352,14 @@
       min-width: 0;
     }
 
-    /* ✅ 统一成 “global note” 的 sticky + 自滚动表现 */
+   
     .card-with-note .note{
       position: sticky;
       top: 20px;
       align-self: start;
 
-      height: var(--noteH);      /* ✅ 关键：每个 card 自己的 note 高度 */
-      max-height: var(--noteH);  /* ✅ 不再用 viewport 算法（避免所有 note 看起来一样） */
+      height: var(--noteH);     
+      max-height: var(--noteH);  
       overflow: hidden;
       z-index: 5;
     }
@@ -380,7 +380,7 @@
     }
     .note p:last-child{ margin-bottom: 0; }
 
-    /* ✅ note 内容可滚动（Global 那种） */
+  
     .note.note-scroll{
       overflow-y: auto;
       padding-right: 10px;
